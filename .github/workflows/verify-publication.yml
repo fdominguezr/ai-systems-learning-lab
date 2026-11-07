@@ -1,0 +1,53 @@
+name: Verify published learning experiment
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'README.md'
+      - 'example.py'
+      - 'test_example.py'
+      - 'LICENSE'
+      - 'CONTENT_LICENSE.md'
+      - 'PROVENANCE.md'
+      - '.github/workflows/verify-publication.yml'
+permissions:
+  contents: read
+concurrency:
+  group: verify-public-learning
+  cancel-in-progress: true
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Checkout public educational files
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0 Node 24
+        with:
+          persist-credentials: false
+      - name: Run published synthetic educational tests
+        run: |
+          python3 -B -m unittest test_example.py -v
+          python3 -B example.py
+      - name: Check public documentation and exact permission boundaries
+        run: |
+          python3 -B - <<'PY'
+          from pathlib import Path
+          for name in ("README.md","example.py","test_example.py","LICENSE","CONTENT_LICENSE.md","PROVENANCE.md"):
+              if not Path(name).is_file(): raise SystemExit("MISSING PUBLIC FILE: "+name)
+          readme=Path("README.md").read_text(encoding="utf-8")
+          for phrase in ("¿Dónde puedes aplicar esta idea?", "Reutiliza el evaluador", "No utilizar este código"):
+              if phrase not in readme: raise SystemExit("PUBLIC EDITORIAL GATE MISSING: "+phrase)
+          if "MIT License" not in Path("LICENSE").read_text(encoding="utf-8"):
+              raise SystemExit("MISSING CODE LICENSE")
+          if "CC BY 4.0" not in Path("CONTENT_LICENSE.md").read_text(encoding="utf-8"):
+              raise SystemExit("MISSING DOCUMENTATION LICENSE")
+          print("PUBLIC_REPRODUCIBILITY_CHECK=PASS; NO_DEPLOYMENT; NO_EXTERIOR_POSTING")
+          PY
+      - name: Evidence summary
+        if: always()
+        run: |
+          echo '## Public learning release verification' >> "$GITHUB_STEP_SUMMARY"
+          echo '- Tests ran on public GitHub-hosted Ubuntu 24.04.' >> "$GITHUB_STEP_SUMMARY"
+          echo '- No release creation, external publishing, credentials or network automation.' >> "$GITHUB_STEP_SUMMARY"
+          echo '- Passing tests verify this educational example only, not model security or generalization.' >> "$GITHUB_STEP_SUMMARY"
