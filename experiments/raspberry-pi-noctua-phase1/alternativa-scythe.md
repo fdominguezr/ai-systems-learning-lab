@@ -20,10 +20,12 @@ La viabilidad mecánica de un disipador mayor, con heatpipes, aletas y herrajes 
 
 *Vista general del disipador de octubre de 2026. Su altura y geometría ayudan a comprender por qué el anclaje es un problema distinto de la disipación térmica.*
 
-### Aspectos que ilustran las dos vistas documentadas
+### Qué muestran las cuatro vistas
 
-- **Disipador y regla:** el volumen físico y las posibles interferencias con la carcasa o componentes.
-- **Herrajes y regla:** la cantidad de piezas, posiciones relativas y dificultad de fijación.
+- **Scythe junto a la Raspberry Pi:** la diferencia de volumen entre ambos equipos, todavía sin montaje conjunto.
+- **Disipador completo:** ventilador, aletas, heatpipes y ocupación general.
+- **Perfil con regla:** escala y posibles interferencias con la carcasa u otros componentes.
+- **Herrajes con regla:** piezas de fijación y dificultad mecánica de integración.
 
 No se dispone en esta publicación de una tabla de dimensiones verificadas ni de un ensayo térmico equivalente de la alternativa. Por tanto, **no se declara vencedor** entre Noctua y Scythe.
 

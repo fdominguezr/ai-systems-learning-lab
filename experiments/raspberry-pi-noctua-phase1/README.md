@@ -20,7 +20,7 @@ Una Raspberry Pi 4 puede funcionar durante periodos prolongados, pero la tempera
 | [3. El ruido y su espectro](acustica.md) | Tres audios reanalizados, tabla de frecuencias y límites de interpretación |
 | [4. Una alternativa: Scythe](alternativa-scythe.md) | Diferencias de etapa y análisis geométrico, sin atribuir pruebas no hechas |
 | [5. Cómo investigar tu propia Raspberry Pi](reproducir.md) | Recopilar observaciones básicas sin modificar el sistema |
-| [6. Archivo fotográfico](fotografias.md) | Galería de las ocho fotografías reales, cronología y pies de foto |
+| [6. Galería ampliada](fotografias.md) | 12 imágenes: seis fotos del Noctua, cuatro del Scythe, una gráfica espectral y una captura de la app |
 
 ## Tres cosas que aprendimos
 
@@ -38,7 +38,7 @@ Una Raspberry Pi 4 puede funcionar durante periodos prolongados, pero la tempera
 | Ensayo térmico histórico | Máxima **reportada** de 51,6 °C en 10 min bajo carga con la fuente original | Repetición independiente actual; generalización a otros entornos |
 | Registro F3 | Existió una referencia a siete días de observación | Log primario recuperado y auditado |
 | Acústica | Picos espectrales reanalizados de tres audios | SPL calibrado, dB(A), RPM ni componente causante |
-| Fotografías | Diez fotografías auténticas y dos imágenes de análisis acústico, optimizadas sin metadatos personales | No equivalen a medidas técnicas ni a autorización para reutilización comercial de imágenes |
+| Material visual | 12 JPG únicos: 6 fotos Noctua (2020), 4 fotos Scythe (2026), 1 gráfica derivada y 1 captura de app | La repetición de una foto entre capítulos no añade archivos ni certifica resultados técnicos |
 
 ## ¿Qué investigarías después?
 
@@ -46,7 +46,7 @@ Una Raspberry Pi 4 puede funcionar durante periodos prolongados, pero la tempera
 
 ## Alcance de esta edición
 
-Publicamos explicación técnica, navegación y **diez fotografías reales y dos imágenes de análisis acústico** seleccionadas o derivadas del material aportado por el titular. Los JPG publicados están optimizados sin EXIF y la captura de la app se ha recortado para ocultar la barra de estado del móvil. **No publicamos** audios originales, datos brutos, capturas privadas, direcciones internas ni documentación operativa. Las fotos ilustran el montaje de 2020 y la alternativa estudiada en 2026; no constituyen mediciones de rendimiento.
+Publicamos explicación técnica, navegación y **12 imágenes únicas (10 fotografías reales, una gráfica derivada del análisis acústico y una captura seleccionada de la app)** del material aportado por el titular o de su análisis. Los JPG publicados están optimizados sin EXIF; la captura de la app se ha recortado para ocultar la barra de estado del móvil. **No publicamos** audios originales, datos brutos, otras capturas de la investigación, direcciones internas ni documentación operativa. La única captura de aplicación pública está seleccionada y recortada. Las fotos ilustran el montaje de 2020 y la alternativa estudiada en 2026; no constituyen mediciones de rendimiento.
 
 **Fuentes externas:** [Documentación oficial de Raspberry Pi](https://www.raspberrypi.com/documentation/computers/os.html) · [Especificaciones de Noctua NF-A4x20 5V](https://www.noctua.at/en/products/nf-a4x20-5v/specifications).
 

@@ -1,10 +1,20 @@
-# 6. Galería ampliada — fotografías y análisis de Noctua y Scythe
+# 6. Galería ampliada — Noctua, Scythe y análisis acústico
 
 [← Guía práctica](reproducir.md) · [Índice](README.md)
 
-**Diez fotografías auténticas y dos imágenes de análisis acústico (12 imágenes en total)**, seleccionadas del material aportado por el autor o derivadas de los análisis originales, optimizadas para GitHub. Los archivos publicados se guardan en [`images/`](images/) y no contienen EXIF. La revisión visual final del lector/autor aún puede detectar correcciones editoriales.
+## Qué contiene esta galería
 
-**Cronología:** las fotografías 01–06 son del montaje Noctua de mayo de 2020; 07–08 y 11–12 documentan la alternativa Scythe de octubre de 2026. Las imágenes 09–10 corresponden al análisis acústico de octubre–noviembre de 2026, no al montaje de 2020.
+**12 archivos JPG únicos, todos accesibles en [`images/`](images/):**
+
+| Grupo | Imágenes | Procedencia |
+| --- | ---: | --- |
+| Prototipo Noctua | **6 fotografías** (01–06) | Mayo de 2020 |
+| Alternativa Scythe | **4 fotografías** (07–08, 11–12) | Octubre de 2026 |
+| Análisis acústico | **2 visualizaciones** (09–10): una gráfica derivada y una captura de aplicación | Audios de octubre–noviembre de 2026 y captura de noviembre |
+
+**Total: 10 fotografías reales + 2 visualizaciones acústicas = 12 imágenes.** Las imágenes se reutilizan en algunos capítulos; eso no aumenta el número de archivos distintos. Se mantienen los números de archivo originales de la edición para que los enlaces existentes sigan funcionando.
+
+Las fotos de Noctua (2020), las fotos de Scythe (2026) y las representaciones acústicas (2026) pertenecen a etapas distintas. **Ninguna imagen del montaje de 2020 es una medición térmica o acústica de 2026.** Los JPG públicos se prepararon para web sin EXIF; la captura de la app se recortó para ocultar la barra de estado del teléfono.
 
 ## Prototipo Noctua — mayo de 2020
 
@@ -44,7 +54,6 @@
 
 *Caja Noctua y prototipo con tapa adaptada; mayo de 2020*
 
-
 ## Alternativa Scythe — octubre de 2026
 
 ### 07. Scythe con regla
@@ -59,8 +68,19 @@
 
 *Piezas metálicas de sujeción con regla; octubre de 2026*
 
+### 11. Scythe junto a Raspberry Pi 4
 
-## Figuras y fotografías añadidas
+![Foto del gran disipador y la Raspberry Pi 4 con regla de referencia](images/11-scythe-junto-a-raspberry-pi.jpg)
+
+*Octubre de 2026: comparación física directa sin instalar el disipador.*
+
+### 12. Vista completa de Scythe
+
+![Disipador Scythe completo con ventilador, heatpipes y escala](images/12-scythe-disipador-completo.jpg)
+
+*Octubre de 2026: ventilador y estructura completos.*
+
+## Acústica — octubre y noviembre de 2026
 
 ### 09. Comparación espectral
 
@@ -74,20 +94,12 @@
 
 *Captura exploratoria de noviembre de 2026, sin la barra superior del teléfono ni audios originales.*
 
-### 11. Scythe junto a Raspberry Pi 4
+## Procedencia, interpretación y reutilización
 
-![Foto del gran disipador y la Raspberry Pi 4 con regla de referencia](images/11-scythe-junto-a-raspberry-pi.jpg)
+El material de origen, los audios brutos y las capturas no seleccionadas se mantienen fuera de esta publicación. **La captura 10 es la única captura de aplicación incluida en la galería pública**; su presencia no implica que se haya publicado el resto de capturas ni los audios.
 
-*Octubre de 2026: comparación física directa sin instalar el disipador.*
+Las fotografías documentan componentes, tamaño y montaje; la gráfica 09 compara espectros normalizados por separado y la captura 10 muestra una exploración en una app. **Ninguna demuestra por sí sola eficacia térmica, nivel sonoro calibrado en dB(A), RPM ni compatibilidad eléctrica o mecánica definitiva.**
 
-### 12. Vista completa de Scythe
-
-![Disipador Scythe completo con ventilador, heatpipes y escala](images/12-scythe-disipador-completo.jpg)
-
-*Octubre de 2026: ventilador y estructura completos.*
-
-## Procedencia y límites
-
-Se conservaron nombres de origen y hashes en el inventario de preparación, sin subir a la documentación pública nombres completos de directorios personales, EXIF, audios ni capturas de aplicaciones. Las fotografías documentan geometría y montaje; las imágenes acústicas ilustran frecuencias relativas. Ninguna prueba eficacia térmica, dB(A), RPM ni parámetros eléctricos. **La publicación de estas versiones JPG no crea por sí sola una licencia de reutilización de las fotografías**.
+La publicación de estas imágenes **no concede automáticamente una licencia abierta para reutilizarlas**. Las condiciones de uso de estos archivos deben establecerse expresamente.
 
 [← Guía práctica](reproducir.md) · [Índice](README.md)
