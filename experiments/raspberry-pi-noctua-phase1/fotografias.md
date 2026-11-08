@@ -1,10 +1,10 @@
-# 6. Galería fotográfica — Noctua 2020 y Scythe 2026
+# 6. Galería ampliada — fotografías y análisis de Noctua y Scythe
 
 [← Guía práctica](reproducir.md) · [Índice](README.md)
 
-**Ocho fotografías originales del material aportado por el autor**, seleccionadas, renombradas y optimizadas a JPG para el repositorio. Los archivos publicados se guardan en [`images/`](images/) y no contienen EXIF. La revisión visual final del lector/autor aún puede detectar correcciones editoriales.
+**Diez fotografías auténticas y dos imágenes de análisis acústico (12 imágenes en total)**, seleccionadas del material aportado por el autor o derivadas de los análisis originales, optimizadas para GitHub. Los archivos publicados se guardan en [`images/`](images/) y no contienen EXIF. La revisión visual final del lector/autor aún puede detectar correcciones editoriales.
 
-**Cronología:** las fotografías 01–06 corresponden a mayo de 2020, en el prototipo Noctua; 07–08 a octubre de 2026, durante el estudio mecánico de la alternativa Scythe. Ninguna es una fotografía tomada durante las mediciones acústicas de octubre–noviembre de 2026.
+**Cronología:** las fotografías 01–06 son del montaje Noctua de mayo de 2020; 07–08 y 11–12 documentan la alternativa Scythe de octubre de 2026. Las imágenes 09–10 corresponden al análisis acústico de octubre–noviembre de 2026, no al montaje de 2020.
 
 ## Prototipo Noctua — mayo de 2020
 
@@ -60,8 +60,34 @@
 *Piezas metálicas de sujeción con regla; octubre de 2026*
 
 
+## Figuras y fotografías añadidas
+
+### 09. Comparación espectral
+
+![Figura con tres firmas espectrales normalizadas por grabación](images/09-noctua-firma-espectral-comparada.jpg)
+
+*Figura de reanálisis, con normalización separada. No representa presión sonora calibrada.*
+
+### 10. Espectro e historial en la aplicación
+
+![Captura recortada de aplicación con espectrograma FFT y picos de frecuencia a lo largo del tiempo](images/10-noctua-app-frecuencia-tiempo.jpg)
+
+*Captura exploratoria de noviembre de 2026, sin la barra superior del teléfono ni audios originales.*
+
+### 11. Scythe junto a Raspberry Pi 4
+
+![Foto del gran disipador y la Raspberry Pi 4 con regla de referencia](images/11-scythe-junto-a-raspberry-pi.jpg)
+
+*Octubre de 2026: comparación física directa sin instalar el disipador.*
+
+### 12. Vista completa de Scythe
+
+![Disipador Scythe completo con ventilador, heatpipes y escala](images/12-scythe-disipador-completo.jpg)
+
+*Octubre de 2026: ventilador y estructura completos.*
+
 ## Procedencia y límites
 
-Se conservaron nombres de origen y hashes en el inventario de preparación, sin subir a la documentación pública nombres completos de directorios personales, EXIF, audios ni capturas de aplicaciones. Las fotografías documentan geometría y montaje; no prueban eficacia térmica, decibelios, RPM ni parámetros eléctricos. **La publicación de estas versiones JPG no crea por sí sola una licencia de reutilización de las fotografías**.
+Se conservaron nombres de origen y hashes en el inventario de preparación, sin subir a la documentación pública nombres completos de directorios personales, EXIF, audios ni capturas de aplicaciones. Las fotografías documentan geometría y montaje; las imágenes acústicas ilustran frecuencias relativas. Ninguna prueba eficacia térmica, dB(A), RPM ni parámetros eléctricos. **La publicación de estas versiones JPG no crea por sí sola una licencia de reutilización de las fotografías**.
 
 [← Guía práctica](reproducir.md) · [Índice](README.md)

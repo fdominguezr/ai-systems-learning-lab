@@ -10,6 +10,16 @@ El prototipo **Noctua** mostrado en el archivo fotográfico corresponde a **mayo
 
 La viabilidad mecánica de un disipador mayor, con heatpipes, aletas y herrajes de montaje. Sobre una placa compacta, la cuestión no es sólo la temperatura nominal esperada: el conjunto debe caber, sujetarse sin interferencias y permitir una integración segura.
 
+## El problema de escala, junto a una Raspberry Pi
+
+![Foto auténtica de una Raspberry Pi 4 junto al gran disipador Scythe con ventilador y regla](images/11-scythe-junto-a-raspberry-pi.jpg)
+
+*Octubre de 2026: ambos equipos aparecen en la misma mesa, sin estar montados entre sí. La comparación muestra volumen y escala, no una validación de rendimiento ni compatibilidad.*
+
+![Vista completa de un disipador Scythe con ventilador y heatpipes junto a una regla](images/12-scythe-disipador-completo.jpg)
+
+*Vista general del disipador de octubre de 2026. Su altura y geometría ayudan a comprender por qué el anclaje es un problema distinto de la disipación térmica.*
+
 ### Aspectos que ilustran las dos vistas documentadas
 
 - **Disipador y regla:** el volumen físico y las posibles interferencias con la carcasa o componentes.
@@ -30,5 +40,13 @@ Una imagen con escala puede mostrar un impedimento físico y justificar continua
 *Octubre de 2026: piezas de fijación y escala; la imagen no demuestra compatibilidad final ni mejora térmica.*
 
 [Ver el archivo fotográfico completo](fotografias.md).
+
+## Preguntas para investigar
+
+- ¿Dónde pondrías el límite de volumen y peso para un equipo Raspberry Pi de funcionamiento continuo?
+- ¿Aceptarías un disipador más grande si realmente redujera el ruido, aunque complicara el anclaje?
+- ¿Qué tolerancias mecánicas medirías antes de intentar montarlo?
+
+[Comenta tu alternativa o experiencia en una issue](https://github.com/fdominguezr/ai-systems-learning-lab/issues/new).
 
 [← Acústica](acustica.md) · [Índice](README.md) · [Siguiente: guía práctica →](reproducir.md)

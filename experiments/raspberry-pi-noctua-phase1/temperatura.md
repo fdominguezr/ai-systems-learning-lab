@@ -19,6 +19,10 @@ Con la fuente original se comunicó una prueba bajo carga de **10 minutos**, con
 | Temperatura ambiente y protocolo completo | No recuperados para esta publicación |
 | Repetición independiente | No realizada aquí |
 
+![Raspberry Pi 4 con disipadores y ventilador Noctua sobre una tapa adaptada, con cableado visible](images/02-noctua-adaptador-interior.jpg)
+
+*Fotografía del prototipo de mayo de 2020. Ilustra la integración mecánica y el cableado, pero no muestra la prueba térmica de 2026 ni acredita un esquema eléctrico reproducible.*
+
 **Interpretación acotada:** este dato es una observación histórica en condiciones parciales. No demuestra una ventaja frente a otro ventilador ni permite extrapolar a una Raspberry Pi distinta.
 
 ## ¿Y el registro de siete días?
@@ -32,5 +36,13 @@ La diferencia importa: *duración comunicada* no equivale a *dataset recuperado*
 Para estudiar refrigeración conviene registrar simultáneamente versión de placa, fuente, temperatura, estado de throttling, carga, condiciones ambientales y posición del conjunto. Primero hay que obtener una línea base estable; después se modifica **una condición cada vez** y se comparan resultados.
 
 La guía [Cómo investigar tu Raspberry Pi](reproducir.md) incluye comandos de observación, sin actuar sobre ventiladores ni GPIO.
+
+## Preguntas para investigar
+
+- ¿Cómo separarías experimentalmente el efecto de la fuente de alimentación y el del ventilador?
+- ¿Qué compararías primero: un ensayo breve con carga controlada o una observación prolongada con temperatura ambiente registrada?
+- ¿Has detectado subtensión o cambios térmicos al sustituir sólo la fuente o la carcasa?
+
+[Comparte una experiencia o propone una contraprueba en una issue](https://github.com/fdominguezr/ai-systems-learning-lab/issues/new), sin incluir información privada.
 
 [← Montaje](montaje.md) · [Índice](README.md) · [Siguiente: acústica →](acustica.md)

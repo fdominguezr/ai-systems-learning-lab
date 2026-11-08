@@ -38,11 +38,15 @@ Una Raspberry Pi 4 puede funcionar durante periodos prolongados, pero la tempera
 | Ensayo térmico histórico | Máxima **reportada** de 51,6 °C en 10 min bajo carga con la fuente original | Repetición independiente actual; generalización a otros entornos |
 | Registro F3 | Existió una referencia a siete días de observación | Log primario recuperado y auditado |
 | Acústica | Picos espectrales reanalizados de tres audios | SPL calibrado, dB(A), RPM ni componente causante |
-| Fotografías | Ocho JPG reales optimizados para web, sin EXIF, con procedencia documentada | No equivalen a medidas técnicas ni a autorización para reutilización comercial de imágenes |
+| Fotografías | Diez fotografías auténticas y dos imágenes de análisis acústico, optimizadas sin metadatos personales | No equivalen a medidas técnicas ni a autorización para reutilización comercial de imágenes |
+
+## ¿Qué investigarías después?
+
+¿Empezarías por alimentación, refrigeración, transmisión de vibraciones o espectro acústico? Los capítulos incluyen preguntas para continuar el experimento. Si puedes reproducir una observación o cuestionar el protocolo, [abre una issue](https://github.com/fdominguezr/ai-systems-learning-lab/issues/new) indicando condiciones y resultados, no sólo impresiones.
 
 ## Alcance de esta edición
 
-Publicamos explicación técnica, navegación y **ocho fotografías reales** seleccionadas del archivo proporcionado por el titular. Los JPG públicos son versiones optimizadas sin EXIF. **No publicamos** audios originales, datos brutos, capturas privadas, direcciones internas ni documentación operativa. Las fotos ilustran el montaje de 2020 y la alternativa estudiada en 2026; no constituyen mediciones de rendimiento.
+Publicamos explicación técnica, navegación y **diez fotografías reales y dos imágenes de análisis acústico** seleccionadas o derivadas del material aportado por el titular. Los JPG publicados están optimizados sin EXIF y la captura de la app se ha recortado para ocultar la barra de estado del móvil. **No publicamos** audios originales, datos brutos, capturas privadas, direcciones internas ni documentación operativa. Las fotos ilustran el montaje de 2020 y la alternativa estudiada en 2026; no constituyen mediciones de rendimiento.
 
 **Fuentes externas:** [Documentación oficial de Raspberry Pi](https://www.raspberrypi.com/documentation/computers/os.html) · [Especificaciones de Noctua NF-A4x20 5V](https://www.noctua.at/en/products/nf-a4x20-5v/specifications).
 
