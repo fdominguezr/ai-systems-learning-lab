@@ -4,6 +4,11 @@
 
 Una Raspberry Pi 4 puede funcionar durante periodos prolongados, pero la temperatura, la alimentación, el montaje del ventilador y el ruido percibido plantean problemas diferentes. En esta serie documentamos lo observado, distinguimos lo medido de lo reportado y explicamos qué se puede reproducir sin manipular el hardware.
 
+![Carcasa de Raspberry Pi 4 abierta junto a tapa artesanal con ventilador Noctua de tres hilos](images/01-noctua-tapa-abierta.jpg)
+
+*Imagen histórica de mayo de 2020. Tapa adaptada y carcasa abierta; no es una medición de 2026.*
+
+
 > **Dos épocas, dos objetivos:** el prototipo Noctua se fotografió en **mayo de 2020**. Las observaciones térmicas y grabaciones acústicas descritas posteriormente pertenecen a **octubre–noviembre de 2026**. Las imágenes de la alternativa Scythe son de octubre de 2026. No son una única campaña experimental.
 
 ## Empieza por aquí
@@ -15,7 +20,7 @@ Una Raspberry Pi 4 puede funcionar durante periodos prolongados, pero la tempera
 | [3. El ruido y su espectro](acustica.md) | Tres audios reanalizados, tabla de frecuencias y límites de interpretación |
 | [4. Una alternativa: Scythe](alternativa-scythe.md) | Diferencias de etapa y análisis geométrico, sin atribuir pruebas no hechas |
 | [5. Cómo investigar tu propia Raspberry Pi](reproducir.md) | Recopilar observaciones básicas sin modificar el sistema |
-| [6. Archivo fotográfico](fotografias.md) | Ocho vistas identificadas, descripciones y estado de recuperación |
+| [6. Archivo fotográfico](fotografias.md) | Galería de las ocho fotografías reales, cronología y pies de foto |
 
 ## Tres cosas que aprendimos
 
@@ -33,11 +38,11 @@ Una Raspberry Pi 4 puede funcionar durante periodos prolongados, pero la tempera
 | Ensayo térmico histórico | Máxima **reportada** de 51,6 °C en 10 min bajo carga con la fuente original | Repetición independiente actual; generalización a otros entornos |
 | Registro F3 | Existió una referencia a siete días de observación | Log primario recuperado y auditado |
 | Acústica | Picos espectrales reanalizados de tres audios | SPL calibrado, dB(A), RPM ni componente causante |
-| Fotografías | Ocho imágenes con posición editorial identificada | Archivos JPG incorporados, revisión visual pública y permisos fotográficos |
+| Fotografías | Ocho JPG reales optimizados para web, sin EXIF, con procedencia documentada | No equivalen a medidas técnicas ni a autorización para reutilización comercial de imágenes |
 
 ## Alcance de esta edición
 
-Publicamos explicación técnica y un itinerario de lectura; **no publicamos** audios originales, datos brutos, capturas privadas, direcciones internas ni documentación operativa. Las fotografías reales siguen pendientes de recuperación de sus bytes, revisión visual y derechos. La ausencia de imágenes aquí es deliberada, no una prueba de que no existan.
+Publicamos explicación técnica, navegación y **ocho fotografías reales** seleccionadas del archivo proporcionado por el titular. Los JPG públicos son versiones optimizadas sin EXIF. **No publicamos** audios originales, datos brutos, capturas privadas, direcciones internas ni documentación operativa. Las fotos ilustran el montaje de 2020 y la alternativa estudiada en 2026; no constituyen mediciones de rendimiento.
 
 **Fuentes externas:** [Documentación oficial de Raspberry Pi](https://www.raspberrypi.com/documentation/computers/os.html) · [Especificaciones de Noctua NF-A4x20 5V](https://www.noctua.at/en/products/nf-a4x20-5v/specifications).
 

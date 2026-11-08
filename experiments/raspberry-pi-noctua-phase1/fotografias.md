@@ -1,31 +1,67 @@
-# 6. Archivo fotográfico — ocho vistas, dos etapas
+# 6. Galería fotográfica — Noctua 2020 y Scythe 2026
 
 [← Guía práctica](reproducir.md) · [Índice](README.md)
 
-Las ocho fotografías reales fueron seleccionadas en la revisión editorial privada. **A fecha de esta edición, sus JPG no están incorporados al repositorio público**: el ZIP de revisión se ha localizado por metadatos, pero no se han podido recuperar sus bytes autorizados para inspección y publicación. No se usan imágenes generadas ni enlaces simulados.
+**Ocho fotografías originales del material aportado por el autor**, seleccionadas, renombradas y optimizadas a JPG para el repositorio. Los archivos publicados se guardan en [`images/`](images/) y no contienen EXIF. La revisión visual final del lector/autor aún puede detectar correcciones editoriales.
 
-## Mayo de 2020 — prototipo Noctua
+**Cronología:** las fotografías 01–06 corresponden a mayo de 2020, en el prototipo Noctua; 07–08 a octubre de 2026, durante el estudio mecánico de la alternativa Scythe. Ninguna es una fotografía tomada durante las mediciones acústicas de octubre–noviembre de 2026.
 
-| Nº | Vista editorial identificada | Pie previsto |
-| --- | --- | --- |
-| 01 | Tapa abierta y ventilador | La carcasa abierta y la tapa con el ventilador muestran juntos el problema de integración |
-| 02 | Interior del adaptador | Interior de la tapa: una solución práctica construida a mano |
-| 03 | Perfil lateral | El perfil ayuda a entender las limitaciones de altura y espacio |
-| 04 | Montaje externo en mesa | Configuración histórica alimentada, fotografiada en 2020; no es la medición acústica de 2026 |
-| 05 | Detalle del ventilador | Primer plano del Noctua antes de integrarlo |
-| 06 | Kit y prototipo | El ventilador comercial junto al adaptador construido |
+## Prototipo Noctua — mayo de 2020
 
-## Octubre de 2026 — alternativa Scythe
+### 01. Carcasa y tapa abiertas
 
-| Nº | Vista editorial identificada | Pie previsto |
-| --- | --- | --- |
-| 07 | Disipador y regla | Heatpipes y aletas: dimensión del disipador alternativo |
-| 08 | Herrajes y regla | Piezas de fijación: la dificultad de integración mecánica |
+![Carcasa y tapa abiertas: Carcasa de Raspberry Pi 4 con disipadores y tapa exterior con el ventilador Noctua; archivo de mayo de 2020](images/01-noctua-tapa-abierta.jpg)
 
-**Estado individual de las ocho vistas:** inventario y pie identificados; archivo en GitHub = **NO**; renderizado = **NO**; inspección visual final y derechos para publicación = **PENDIENTES**.
+*Carcasa de Raspberry Pi 4 con disipadores y tapa exterior con el ventilador Noctua; archivo de mayo de 2020*
 
-## Para completar la edición fotográfica
+### 02. Interior del adaptador
 
-Se incorporarán las imágenes reales optimizadas sólo después de: recuperar archivos, comprobar coincidencia y formato, inspeccionar su contenido visible, eliminar metadatos innecesarios, confirmar titularidad/derechos y verificar su visualización en GitHub. El artículo mantendrá su orden cronológico y distinguirá fotografías de observaciones instrumentales.
+![Interior del adaptador: Tapa artesanal de madera con cableado y ventilador Noctua frente a la carcasa abierta; mayo de 2020](images/02-noctua-adaptador-interior.jpg)
+
+*Tapa artesanal de madera con cableado y ventilador Noctua frente a la carcasa abierta; mayo de 2020*
+
+### 03. Perfil lateral
+
+![Perfil lateral: Vista lateral de la adaptación y el ventilador sobresaliente; mayo de 2020](images/03-noctua-vista-lateral.jpg)
+
+*Vista lateral de la adaptación y el ventilador sobresaliente; mayo de 2020*
+
+### 04. Montaje externo
+
+![Montaje externo: Tapa instalada y conectada sobre mesa de trabajo; fotografía de 2020, no toma acústica de 2026](images/04-noctua-montaje-externo.jpg)
+
+*Tapa instalada y conectada sobre mesa de trabajo; fotografía de 2020, no toma acústica de 2026*
+
+### 05. Ventilador antes de integrar
+
+![Ventilador antes de integrar: Detalle del Noctua en su embalaje; mayo de 2020](images/05-noctua-ventilador-detalle.jpg)
+
+*Detalle del Noctua en su embalaje; mayo de 2020*
+
+### 06. Kit y prototipo
+
+![Kit y prototipo: Caja Noctua y prototipo con tapa adaptada; mayo de 2020](images/06-noctua-kit-prototipo.jpg)
+
+*Caja Noctua y prototipo con tapa adaptada; mayo de 2020*
+
+
+## Alternativa Scythe — octubre de 2026
+
+### 07. Scythe con regla
+
+![Scythe con regla: Heatpipes y aletas de disipador alternativo con escala; octubre de 2026](images/07-scythe-disipador-medida.jpg)
+
+*Heatpipes y aletas de disipador alternativo con escala; octubre de 2026*
+
+### 08. Fijaciones Scythe
+
+![Fijaciones Scythe: Piezas metálicas de sujeción con regla; octubre de 2026](images/08-scythe-fijaciones-medida.jpg)
+
+*Piezas metálicas de sujeción con regla; octubre de 2026*
+
+
+## Procedencia y límites
+
+Se conservaron nombres de origen y hashes en el inventario de preparación, sin subir a la documentación pública nombres completos de directorios personales, EXIF, audios ni capturas de aplicaciones. Las fotografías documentan geometría y montaje; no prueban eficacia térmica, decibelios, RPM ni parámetros eléctricos. **La publicación de estas versiones JPG no crea por sí sola una licencia de reutilización de las fotografías**.
 
 [← Guía práctica](reproducir.md) · [Índice](README.md)

@@ -21,6 +21,14 @@ No se dispone en esta publicación de una tabla de dimensiones verificadas ni de
 
 Una imagen con escala puede mostrar un impedimento físico y justificar continuar o abandonar un diseño. Pero una fotografía no reemplaza tolerancias medidas, ensayos de montaje o una verificación térmica y mecánica.
 
-Las dos fotografías auténticas de la alternativa están inventariadas, pero sus bytes y permisos siguen pendientes de revisión. [Ver archivo fotográfico](fotografias.md).
+![Disipador alternativo Scythe con heatpipes de cobre y aletas metálicas situado frente a una regla graduada](images/07-scythe-disipador-medida.jpg)
+
+*Octubre de 2026: perfil del disipador alternativo junto a una regla, útil para evaluar ocupación mecánica.*
+
+![Dos herrajes metálicos de montaje del disipador alternativo con soportes negros junto a regla centimetrada](images/08-scythe-fijaciones-medida.jpg)
+
+*Octubre de 2026: piezas de fijación y escala; la imagen no demuestra compatibilidad final ni mejora térmica.*
+
+[Ver el archivo fotográfico completo](fotografias.md).
 
 [← Acústica](acustica.md) · [Índice](README.md) · [Siguiente: guía práctica →](reproducir.md)

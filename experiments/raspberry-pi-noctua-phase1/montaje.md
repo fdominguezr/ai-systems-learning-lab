@@ -23,7 +23,30 @@ Tampoco se publica aquí una guía de conexión GPIO ni una alimentación eléct
 
 ## Qué documenta el archivo fotográfico
 
-El inventario histórico identifica una vista de tapa abierta, interior de la adaptación, perfil lateral, montaje sobre mesa, primer plano del ventilador y conjunto del prototipo. La [página de fotografías](fotografias.md) conserva sus pies y estado, **sin insertar archivos que todavía no están en el repositorio**.
+El inventario histórico incluye una vista de tapa abierta, interior de la adaptación, perfil lateral, montaje sobre mesa, primer plano y conjunto del prototipo. A continuación se muestran las fotografías **reales de mayo de 2020**, sin interpretarlas como mediciones acústicas de 2026.
+
+![Raspberry Pi 4 abierta junto al interior de tapa de madera, con ventilador Noctua montado y cables visibles](images/02-noctua-adaptador-interior.jpg)
+
+*Interior de la adaptación de madera. Fotografía de montaje histórico, no esquema eléctrico reproducible.*
+
+![Perfil lateral de carcasa de Raspberry Pi 4 con tapa de madera y ventilador sobresaliente](images/03-noctua-vista-lateral.jpg)
+
+*Vista lateral: la altura del ventilador condiciona el espacio disponible.*
+
+![Tapa con ventilador Noctua protegida por rejilla de alambre, sobre mesa y conectada por cables](images/04-noctua-montaje-externo.jpg)
+
+*Montaje sobre la mesa de trabajo en 2020; **no** pertenece a las grabaciones acústicas de 2026.*
+
+![Primer plano del ventilador Noctua marrón y beige dentro de su embalaje transparente](images/05-noctua-ventilador-detalle.jpg)
+
+*Detalle del componente antes de integrarlo.*
+
+![Caja del ventilador Noctua NF-A4x20 5V junto al prototipo artesanal sobre tapete de corte](images/06-noctua-kit-prototipo.jpg)
+
+*Producto comercial y prototipo a escala contextual. La fotografía no representa una medida dimensional calibrada.*
+
+[Ver la galería completa y su cronología](fotografias.md).
+
 
 ## Qué habría que medir para convertirlo en diseño reproducible
 
