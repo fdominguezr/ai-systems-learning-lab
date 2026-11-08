@@ -2,6 +2,10 @@
 
 **Una investigación práctica en varias etapas, no una comparación comercial de ventiladores.**
 
+¿Quieres usar una Raspberry Pi en casa? Pues lo mismo el ruido del ventilador molesta...
+A menos que lo soluciones.
+Aquí explico mis experimentos, pruebas, errores y aciertos para ahorrarte horas, o simplemente veas otra forma de hacerlo..
+
 Una Raspberry Pi 4 puede funcionar durante periodos prolongados, pero la temperatura, la alimentación, el montaje del ventilador y el ruido percibido plantean problemas diferentes. En esta serie documentamos lo observado, distinguimos lo medido de lo reportado y explicamos qué se puede reproducir sin manipular el hardware.
 
 ![Carcasa de Raspberry Pi 4 abierta junto a tapa artesanal con ventilador Noctua de tres hilos](images/01-noctua-tapa-abierta.jpg)
@@ -24,7 +28,7 @@ Una Raspberry Pi 4 puede funcionar durante periodos prolongados, pero la tempera
 
 ## Tres cosas que aprendimos
 
-**1. Alimentación y temperatura no son lo mismo.** Una subtensión afecta la interpretación de cualquier prueba térmica. Antes de atribuir un problema al ventilador, hay que documentar la fuente utilizada y el estado de throttling.
+**1. Alimentación y temperatura no impactan por igual.** Una subtensión afecta la interpretación de cualquier prueba térmica. Antes de atribuir un problema al ventilador, hay que documentar la fuente utilizada y el estado de throttling. Esto se puede medir fácilmente con algunos comandos bien documentados que podremos ver. Así nos aseguramos que partimos de una buena base de funcionamiento.
 
 **2. Una frecuencia acústica no equivale a revoluciones por minuto ni a decibelios.** En tres grabaciones aparecieron bandas periódicas compatibles con armónicos, pero sin una medición acústica calibrada ni identificación causal.
 
