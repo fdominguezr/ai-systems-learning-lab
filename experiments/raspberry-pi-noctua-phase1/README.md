@@ -1,69 +1,44 @@
-# Raspberry Pi 4 + Noctua: ¿puede refrigerar bien y seguir sonando?
+# Raspberry Pi 4 + Noctua: refrigeración, montaje y ruido
 
-**Artículo técnico — edición pública textual.** El montaje fotográfico corresponde a mayo de 2020; las observaciones térmicas y acústicas descritas pertenecen a otras pruebas de octubre-noviembre de 2026. Las imágenes de archivo todavía no están incorporadas a esta edición.
+**Una investigación práctica en varias etapas, no una comparación comercial de ventiladores.**
 
-## El problema real
+Una Raspberry Pi 4 puede funcionar durante periodos prolongados, pero la temperatura, la alimentación, el montaje del ventilador y el ruido percibido plantean problemas diferentes. En esta serie documentamos lo observado, distinguimos lo medido de lo reportado y explicamos qué se puede reproducir sin manipular el hardware.
 
-La primera pregunta no era cómo programar un ventilador, sino cómo mantener una Raspberry Pi 4 funcionando, estable y sin ruido molesto. Montamos un **Noctua NF-A4x20 5V de tres hilos**, disipadores de cobre y una tapa adaptada artesanalmente. El archivo fotográfico de esa etapa documenta la adaptación mecánica; las imágenes permanecen pendientes de revisión para su incorporación pública.
+> **Dos épocas, dos objetivos:** el prototipo Noctua se fotografió en **mayo de 2020**. Las observaciones térmicas y grabaciones acústicas descritas posteriormente pertenecen a **octubre–noviembre de 2026**. Las imágenes de la alternativa Scythe son de octubre de 2026. No son una única campaña experimental.
 
-La tapa adaptada alojaba el ventilador junto a la carcasa de la Raspberry Pi. No hay fotografía incorporada a esta edición.
+## Empieza por aquí
 
-Noctua es una marca reconocida por sus ventiladores silenciosos, pero una buena especificación de catálogo no prueba el ruido del conjunto real. El mueble, la carcasa, la alimentación, las resonancias y la posición del micrófono también importan.
+| Página | Qué encontrarás |
+| --- | --- |
+| [1. Montaje del prototipo](montaje.md) | Ventilador, adaptación mecánica y límites de la documentación |
+| [2. Alimentación y temperatura](temperatura.md) | Prueba histórica de 10 minutos, subtensión y registro F3 pendiente |
+| [3. El ruido y su espectro](acustica.md) | Tres audios reanalizados, tabla de frecuencias y límites de interpretación |
+| [4. Una alternativa: Scythe](alternativa-scythe.md) | Diferencias de etapa y análisis geométrico, sin atribuir pruebas no hechas |
+| [5. Cómo investigar tu propia Raspberry Pi](reproducir.md) | Recopilar observaciones básicas sin modificar el sistema |
+| [6. Archivo fotográfico](fotografias.md) | Ocho vistas identificadas, descripciones y estado de recuperación |
 
-## Montaje y limitaciones mecánicas
+## Tres cosas que aprendimos
 
-El prototipo incluía una adaptación interior y un perfil condicionado por el espacio disponible. Esta solución artesanal permitía ensayar un ventilador concreto; no es una guía de montaje certificada, ni documenta todavía un esquema eléctrico reproducible.
+**1. Alimentación y temperatura no son lo mismo.** Una subtensión afecta la interpretación de cualquier prueba térmica. Antes de atribuir un problema al ventilador, hay que documentar la fuente utilizada y el estado de throttling.
 
-El ventilador instalado era **de 3 pines**: la línea de tacómetro no es una entrada PWM dedicada. No se comprobó control PWM continuo del Noctua en esta etapa.
+**2. Una frecuencia acústica no equivale a revoluciones por minuto ni a decibelios.** En tres grabaciones aparecieron bandas periódicas compatibles con armónicos, pero sin una medición acústica calibrada ni identificación causal.
 
-## Primero, alimentación y temperatura
+**3. El espacio disponible también es una especificación.** Un ventilador o disipador puede ser adecuado sobre el papel y exigir adaptadores, tapas o fijaciones difíciles de integrar.
 
-Las pruebas históricas comunicaron subtensión con una fuente alternativa. Con la fuente original se registró una prueba de 10 minutos bajo carga y una temperatura máxima **reportada** de **51,6 °C** sin throttling en las muestras indicadas. También se comunicó un baseline F3 de siete días.
+## Resultados y límites, de un vistazo
 
-**Advertencia de procedencia:** el archivo primario F3 no está disponible en esta revisión. Las cifras anteriores **no** deben presentarse como auditadas o reproducidas ahora.
+| Elemento | Qué consta | Qué no está demostrado |
+| --- | --- | --- |
+| Prototipo 2020 | Noctua NF-A4x20 5V, tres hilos, tapa adaptada | Esquema eléctrico reproducible, PWM continuo |
+| Ensayo térmico histórico | Máxima **reportada** de 51,6 °C en 10 min bajo carga con la fuente original | Repetición independiente actual; generalización a otros entornos |
+| Registro F3 | Existió una referencia a siete días de observación | Log primario recuperado y auditado |
+| Acústica | Picos espectrales reanalizados de tres audios | SPL calibrado, dB(A), RPM ni componente causante |
+| Fotografías | Ocho imágenes con posición editorial identificada | Archivos JPG incorporados, revisión visual pública y permisos fotográficos |
 
-## Después, el ruido: ¿qué decía el espectro?
+## Alcance de esta edición
 
-Reanalizamos tres audios originales: grabación de octubre con desplazamiento aproximado de 1 m a 1 cm y regreso; dos grabaciones de noviembre históricamente atribuidas a unos 5 cm y 1 m. Se utilizó ventana Hann de 4 s, solapamiento del 50 % y mediana de espectros.
+Publicamos explicación técnica y un itinerario de lectura; **no publicamos** audios originales, datos brutos, capturas privadas, direcciones internas ni documentación operativa. Las fotografías reales siguen pendientes de recuperación de sus bytes, revisión visual y derechos. La ausencia de imágenes aquí es deliberada, no una prueba de que no existan.
 
-| Audio | Banda baja | Banda próxima a 7× | Banda próxima a 16× |
-| --- | ---: | ---: | ---: |
-| Octubre | **91,00 Hz** | **637,25 Hz** | **1.456,50 Hz** |
-| Noviembre, cercano* | **87,50 Hz** | **612,25 Hz** | **1.399,50 Hz** |
-| Noviembre, lejano* | **87,25 Hz** | **611,25 Hz** | **1.397,75 Hz** |
+**Fuentes externas:** [Documentación oficial de Raspberry Pi](https://www.raspberrypi.com/documentation/computers/os.html) · [Especificaciones de Noctua NF-A4x20 5V](https://www.noctua.at/en/products/nf-a4x20-5v/specifications).
 
-*La atribución de distancia es histórica; no se mide a partir del audio.*
-
-Los picos son compatibles con una fuente periódica y sus armónicos. **No prueban RPM, no identifican la pieza causante ni indican dB(A)**. La grabación con móvil no equivale a un sonómetro calibrado. No hay una comparación acústica equivalente con el ventilador posterior Armor Lite.
-
-## ¿Por qué no una alternativa de disipador mayor?
-
-En octubre de 2026 evaluamos también una alternativa **Scythe** con heatpipes y fijaciones. **No era el montaje Noctua de 2020.** El estudio mecánico con una regla sirvió para considerar volumen, interferencias y costes de integración que no siempre se aprecian en las fichas técnicas.
-
-Las fotografías de la alternativa Scythe permanecen en revisión y aún no están publicadas.
-
-## Qué puedes aprovechar
-
-En tu Raspberry Pi puedes comenzar con observaciones **sin alterar el hardware**:
-
-```sh
-tr -d '\000' < /proc/device-tree/model; printf '\n'
-uname -r
-if command -v vcgencmd >/dev/null 2>&1; then
-  vcgencmd measure_temp
-  vcgencmd get_throttled
-fi
-```
-
-Registra las condiciones, separa problemas de alimentación de ruido y temperatura, y conserva los audios originales si quieres estudiar espectros. Si encuentras un error o reproduces el fenómeno, abre una issue indicando modelo, montaje, alimentación y protocolo de medida (sin datos privados).
-
-**Estado de la investigación:** inventario de fotografías originales documentado en revisión privada, con imágenes todavía no incorporadas; acústica reanalizada en la revisión anterior; fuente primaria de F3 pendiente; sin medición SPL calibrada ni publicación de audios brutos.
-
-**Fuentes:** [Raspberry Pi documentación oficial](https://www.raspberrypi.com/documentation/computers/os.html) · [Noctua NF-A4x20 5V](https://www.noctua.at/en/products/nf-a4x20-5v/specifications).
-
-
-## Alcance editorial y reutilización
-
-Esta edición pública contiene únicamente texto técnico. No incorpora fotografías, archivos de audio, telemetría bruta, documentos de control interno ni materiales de otros proyectos. Los resultados históricos señalados como *reportados* no constituyen verificaciones independientes.
-
-Las condiciones de reutilización de este artículo específico están pendientes de determinación por su titular. La licencia [CONTENT_LICENSE.md](../../CONTENT_LICENSE.md) existente identifica expresamente otros materiales del repositorio y no debe interpretarse como una autorización automática sobre este artículo o fotografías futuras.
+**Reutilización:** la licencia de contenidos existente en la raíz del repositorio identifica expresamente otras obras; no se presume que cubra este artículo ni futuras imágenes. [Ver aviso de licencia](../../CONTENT_LICENSE.md).
