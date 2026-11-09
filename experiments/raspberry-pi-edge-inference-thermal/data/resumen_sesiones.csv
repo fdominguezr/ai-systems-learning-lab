@@ -1,0 +1,4 @@
+observacion,observadas,previstas,temp_min_c,temp_max_c,max_corresponds_to,integridad_sha_csv
+baja_actividad,239,239,26.284,28.719,sesion_independiente,pendiente
+primera_prueba,2699,2699,25.31,37.972,sesion_varias_cargas,pendiente
+segunda_prueba,303,2759,26.771,38.946,sesion_cobertura_parcial,pendiente

@@ -55,3 +55,7 @@ Publicamos explicación técnica, navegación y **12 imágenes únicas (10 fotog
 **Fuentes externas:** [Documentación oficial de Raspberry Pi](https://www.raspberrypi.com/documentation/computers/os.html) · [Especificaciones de Noctua NF-A4x20 5V](https://www.noctua.at/en/products/nf-a4x20-5v/specifications).
 
 **Reutilización:** la licencia de contenidos existente en la raíz del repositorio identifica expresamente otras obras; no se presume que cubra este artículo ni futuras imágenes. [Ver aviso de licencia](../../CONTENT_LICENSE.md).
+
+## Continuación: Raspberry Pi ejecutando modelos de IA
+
+¿Qué ocurre con la temperatura cuando un ordenador tan pequeño ejecuta modelos de lenguaje durante horas? En el [nuevo artículo sobre inferencia local y mediciones térmicas](../raspberry-pi-edge-inference-thermal/README.md) analizamos calentamiento, recuperación y un pico que las comprobaciones puntuales no captaron. Es una investigación exploratoria, no una comparación controlada de modelos.
