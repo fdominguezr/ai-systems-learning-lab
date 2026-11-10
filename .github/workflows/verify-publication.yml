@@ -2,15 +2,7 @@ name: Verify published learning experiment
 on:
   workflow_dispatch:
   push:
-    branches: [main]
-    paths:
-      - 'README.md'
-      - 'example.py'
-      - 'test_example.py'
-      - 'LICENSE'
-      - 'CONTENT_LICENSE.md'
-      - 'PROVENANCE.md'
-      - '.github/workflows/verify-publication.yml'
+  pull_request:
 permissions:
   contents: read
 concurrency:
@@ -35,19 +27,20 @@ jobs:
           from pathlib import Path
           for name in ("README.md","example.py","test_example.py","LICENSE","CONTENT_LICENSE.md","PROVENANCE.md"):
               if not Path(name).is_file(): raise SystemExit("MISSING PUBLIC FILE: "+name)
-          readme=Path("README.md").read_text(encoding="utf-8")
-          for phrase in ("¿Dónde puedes aplicar esta idea?", "Reutiliza el evaluador", "No utilizar este código"):
-              if phrase not in readme: raise SystemExit("PUBLIC EDITORIAL GATE MISSING: "+phrase)
           if "MIT License" not in Path("LICENSE").read_text(encoding="utf-8"):
               raise SystemExit("MISSING CODE LICENSE")
           if "CC BY 4.0" not in Path("CONTENT_LICENSE.md").read_text(encoding="utf-8"):
               raise SystemExit("MISSING DOCUMENTATION LICENSE")
           print("PUBLIC_REPRODUCIBILITY_CHECK=PASS; NO_DEPLOYMENT; NO_EXTERIOR_POSTING")
           PY
+      - name: Check publication structure and regression cases
+        run: |
+          python3 -B scripts/check_publication.py
+          python3 -B -m unittest discover -s tests -v
       - name: Evidence summary
         if: always()
         run: |
           echo '## Public learning release verification' >> "$GITHUB_STEP_SUMMARY"
           echo '- Tests ran on public GitHub-hosted Ubuntu 24.04.' >> "$GITHUB_STEP_SUMMARY"
           echo '- No release creation, external publishing, credentials or network automation.' >> "$GITHUB_STEP_SUMMARY"
-          echo '- Passing tests verify this educational example only, not model security or generalization.' >> "$GITHUB_STEP_SUMMARY"
+          echo '- Structural PASS is not visual, factual or deployment approval. Complete docs/PUBLICATION_CHECKLIST.md.' >> "$GITHUB_STEP_SUMMARY"
