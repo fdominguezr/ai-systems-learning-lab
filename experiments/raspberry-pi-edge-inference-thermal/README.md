@@ -6,9 +6,9 @@
 
 Una Raspberry Pi 4B puede ejecutar modelos de lenguaje localmente sin una GPU dedicada. Pero, ¿cómo responde su temperatura cuando se mantiene trabajando durante horas? Para averiguarlo registramos la temperatura durante tres observaciones: una con baja actividad y dos con cargas de inferencia de distinta duración.
 
-![Carcasa de Raspberry Pi 4 junto a un montaje artesanal Noctua](figures/raspberry-pi-noctua-historico-2020.jpg)
+![Montaje 2026 de la Raspberry Pi con el sistema de refrigeración de la campaña actual](figures/raspberry-pi-cooling-2026.jpg)
 
-*Fotografía histórica del proyecto de refrigeración Noctua, tomada en **2020**. Muestra la familia de hardware utilizada en la serie, **no** acredita que ese ventilador estuviera instalado durante las pruebas de inferencia de 2026.*
+*Fotografía de octubre de **2026**: Raspberry Pi 4B en su carcasa, con disipadores y cableado de refrigeración visibles. Pertenece a la etapa de trabajo actual, pero no permite acreditar por sí sola la configuración exacta de ventilación durante cada medición térmica.*
 
 ## Lee la serie
 
@@ -30,3 +30,5 @@ Una Raspberry Pi 4B puede ejecutar modelos de lenguaje localmente sin una GPU de
 Continuamos la investigación sobre refrigeración y ruido iniciada en [Raspberry Pi 4 + Noctua: montaje, alimentación y acústica](../raspberry-pi-noctua-phase1/README.md). **No asumimos que la configuración de ventilación de aquellas fotografías de 2020 estuviera presente en las sesiones térmicas actuales.**
 
 **Alcance de la publicación:** análisis exploratorio, no benchmark controlado. Los tres resúmenes de telemetría están disponibles, pero los CSV originales y los eventos de aplicación todavía no han podido verificarse por SHA-256 en esta preparación; por ello las figuras no simulan una curva continua cuando faltan sus muestras.
+
+[Siguiente: hardware y modelos →](01-hardware-modelos.md)

@@ -24,22 +24,44 @@ ax.barh(labels,vals);ax.invert_yaxis();ax.set_xlim(0,3.0);ax.set_xlabel('Miles d
 for i,v in enumerate(vals):ax.text(v+.03,i,f'{v:g} B',va='center',fontsize=10)
 fig.text(.1,.025,'Tamaños comerciales aproximados. No son consumo de RAM, velocidad ni temperatura.',fontsize=9)
 fig.tight_layout(rect=[0,.055,1,1]);fig.savefig(FIG/'modelos_parametros.png');plt.close(fig)
-# CPU inference diagram
-fig,ax=plt.subplots(figsize=(10,3.9));ax.axis('off')
-fig.text(.5,.89,'Cómo se ejecuta una respuesta sin GPU dedicada',ha='center',size=16)
-blocks=[(.05,'Pregunta\ndel usuario'),(.29,'Modelo cuantizado\nen memoria RAM'),(.56,'Cálculo con\nCPU ARM'),(.80,'Respuesta\ngenerada')]
-for x,t in blocks:
-    ax.text(x+.075,.47,t,transform=ax.transAxes,ha='center',va='center',bbox=dict(boxstyle='round,pad=.8',facecolor='white',edgecolor='black'),fontsize=10)
-for x in [.24,.51,.75]:ax.annotate('',xy=(x+.045,.47),xytext=(x,.47),xycoords='axes fraction',arrowprops={'arrowstyle':'->','lw':1.7})
-fig.text(.5,.15,'Cuantización = menos bits por peso · RAM, tiempo y calor siguen siendo restricciones.',ha='center',size=9)
+# CPU inference diagram: rectangle geometry and arrows deliberately in gaps only
+from matplotlib.patches import FancyBboxPatch
+fig, ax = plt.subplots(figsize=(11, 4.2))
+ax.set_xlim(0, 1); ax.set_ylim(0, 1); ax.axis('off')
+fig.text(.5, .91, 'Cómo se ejecuta una respuesta sin GPU dedicada', ha='center', fontsize=16)
+boxes = [
+  (.02, .16, 'Pregunta\ndel usuario'),
+  (.25, .26, 'Modelo cuantizado\nen memoria RAM'),
+  (.58, .17, 'Cálculo con\nCPU ARM'),
+  (.83, .15, 'Respuesta\ngenerada'),
+]
+for x, width, label in boxes:
+    ax.add_patch(FancyBboxPatch((x,.43),width,.22,boxstyle='round,pad=0.008,rounding_size=0.025',
+        transform=ax.transAxes,facecolor='white',edgecolor='black',linewidth=1.3))
+    ax.text(x+width/2,.54,label,transform=ax.transAxes,va='center',ha='center',fontsize=10)
+for left,right in zip(boxes[:-1],boxes[1:]):
+    xa=left[0]+left[1]+.012; xb=right[0]-.012
+    assert xb>xa, 'Arrows must fit entirely between rectangles'
+    ax.annotate('',xy=(xb,.54),xytext=(xa,.54),xycoords=ax.transAxes,
+        arrowprops={'arrowstyle':'->','lw':1.8,'mutation_scale':15})
+fig.text(.5,.15,'Cuantización = menos bits por peso · RAM, tiempo y calor siguen siendo restricciones.',ha='center',fontsize=9)
 fig.savefig(FIG/'inferencia_cpu.png',bbox_inches='tight');plt.close(fig)
-# coverage three different sessions, no fake therm series
+# coverage three different sessions, no fake thermal series.
+# Legend is BELOW the axes; this avoids obscuring the longest bar on desktop or mobile.
 counts=[('Baja actividad',239,239),('Primera prueba',2699,2699),('Segunda prueba',303,2759)]
-fig,ax=plt.subplots(figsize=(10,4.9));x=np.arange(3);obs=[a[1] for a in counts]; missing=[a[2]-a[1] for a in counts]
-ax.barh(x,obs,label='Muestras observadas');ax.barh(x,missing,left=obs,label='Sin registro');ax.invert_yaxis();ax.set_yticks(x,[a[0] for a in counts]);ax.set_xlabel('Número de muestras');ax.set_title('Cobertura de los registros térmicos')
-for i,(n,o,p) in enumerate(counts):ax.text(p+18,i,f'{o:,}/{p:,}'.replace(',','.'),va='center',fontsize=10)
-ax.set_xlim(0,3300);ax.legend(loc='lower right');fig.text(.13,.025,'Cadencia nominal: una lectura cada 5 s. Tres sesiones independientes.',fontsize=9)
-fig.tight_layout(rect=[0,.045,1,1]);fig.savefig(FIG/'cobertura_registros.png');plt.close(fig)
+fig,ax=plt.subplots(figsize=(10.6,5.4))
+x=np.arange(3); obs=[a[1] for a in counts]; missing=[a[2]-a[1] for a in counts]
+ax.barh(x,obs,label='Muestras observadas',height=.62)
+ax.barh(x,missing,left=obs,label='Sin registro',height=.62)
+ax.invert_yaxis();ax.set_yticks(x,[a[0] for a in counts]);ax.set_xlabel('Número de muestras')
+ax.set_title('Cobertura de los registros térmicos')
+for i,(_,o,total) in enumerate(counts):
+    ax.text(total+22,i,f'{o:,}/{total:,}'.replace(',','.'),va='center',fontsize=10)
+ax.set_xlim(0,3300)
+fig.subplots_adjust(left=.20,right=.97,top=.86,bottom=.30)
+ax.legend(loc='upper center',bbox_to_anchor=(.5,-.17),ncol=2,frameon=False)
+fig.text(.5,.04,'Cadencia nominal: una lectura cada 5 s. Tres sesiones independientes.',ha='center',fontsize=9)
+fig.savefig(FIG/'cobertura_registros.png');plt.close(fig)
 # first thermal points; no interpolating
 fig,ax=plt.subplots(figsize=(9.6,4.8));ax.scatter([0,10],[33.589,27.745],s=90,marker='o')
 ax.set_xlim(-1.2,11.5);ax.set_ylim(25,36);ax.set_xticks([0,10],['Fin de la carga','~10 min después']);ax.set_ylabel('Temperatura (°C)');ax.set_title('Recuperación: dos lecturas, no una curva reconstruida');ax.grid(alpha=.25)
@@ -47,11 +69,18 @@ for x,y in [(0,33.589),(10,27.745)]:ax.annotate(f'{y:.2f} °C',(x,y),xytext=(0,1
 fig.text(.11,.018,'Lecturas comunicadas de la primera prueba. No se representa la trayectoria entre ambas.',fontsize=9)
 fig.tight_layout(rect=[0,.05,1,1]);fig.savefig(FIG/'recuperacion_dos_puntos.png');plt.close(fig)
 # second comparison observed peak types, not max by model
-fig,ax=plt.subplots(figsize=(9.6,4.8));vals=[38.946,37.97,37.48];cats=['Registro cada 5 s\nmáximo','Controles de esa fase\nmáximo','Control posterior\npuntual'];ax.scatter(list(range(3)),vals,s=190);ax.set_xticks(list(range(3)),cats)
-ax.axhline(38.5,ls='--',label='Umbral experimental 38,5 °C');ax.set_ylim(34,40);ax.set_ylabel('Temperatura (°C)');ax.set_title('Segunda prueba: distintos instrumentos e instantes');ax.grid(axis='y',alpha=.25)
-for i,v in enumerate(vals):ax.text(i,v+.12,f'{v:.2f} °C',ha='center')
-ax.legend(loc='lower left');fig.text(.1,.02,'Puntos con distinto alcance temporal: no corresponden a tres modelos comparables.',fontsize=9)
-fig.tight_layout(rect=[0,.055,1,1]);fig.savefig(FIG/'segunda_prueba_registros.png');plt.close(fig)
+fig,ax=plt.subplots(figsize=(9.8,5.0));vals=[38.946,37.97,37.48]
+cats=['Registro cada 5 s\nmáximo','Controles de esa fase\nmáximo','Control posterior\npuntual']
+ax.scatter(list(range(3)),vals,s=190)
+ax.set_xticks(list(range(3)),cats)
+ax.axhline(38.5,ls='--',label='Umbral experimental 38,5 °C')
+ax.set_ylim(34,40);ax.set_ylabel('Temperatura (°C)')
+ax.set_title('Segunda prueba: distintos instrumentos e instantes');ax.grid(axis='y',alpha=.25)
+for i,v in enumerate(vals):ax.text(i,v+.14,f'{v:.2f} °C',ha='center')
+fig.subplots_adjust(left=.10,right=.95,top=.85,bottom=.36)
+ax.legend(loc='upper center',bbox_to_anchor=(.5,-.31),ncol=1,frameon=False)
+fig.text(.5,.025,'Puntos con distinto alcance temporal: no corresponden a tres modelos comparables.',ha='center',fontsize=9)
+fig.savefig(FIG/'segunda_prueba_registros.png');plt.close(fig)
 # maxima by session but show noncausal, use dot plot no model label
 fig,ax=plt.subplots(figsize=(9.6,4.8));ys=[37.972,38.946];x=[0,1];ax.scatter(x,ys,s=170)
 for xx,yy in zip(x,ys):ax.annotate(f'{yy:.3f} °C',(xx,yy),xytext=(0,13),textcoords='offset points',ha='center')
